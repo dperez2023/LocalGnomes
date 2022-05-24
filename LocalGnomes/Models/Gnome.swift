@@ -10,6 +10,7 @@ import Foundation
 enum Gender: String {
     case male
     case female
+    case unknown
 }
 
 struct Gnome: Codable, Identifiable {
@@ -27,7 +28,7 @@ struct Gnome: Codable, Identifiable {
     let friends: [String]
 
     var displayName: String {
-        "\(name) (Could be \(gender.rawValue)"
+        "\(name) (\(gender.rawValue))"
     }
 
     private var gender: Gender {

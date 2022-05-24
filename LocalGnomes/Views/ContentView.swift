@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var gnomes = [Gnome]()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(gnomes, id: \.id) { item in
+            VStack(alignment: .leading) {
+                Text(item.displayName)
+                    .font(.headline)
+            }
+        }
+        .task {
+            await loadData()
+        }
+    }
+    
+    func loadData() async {
+        await DataManager.loadData(.Brastlewark, completion: { response, error in
+            if let response = response {
+                gnomes = response
+            } else if let error = error {
+                print("Present error alert \(error)")
+            }
+        })
     }
 }
 
