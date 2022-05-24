@@ -12,19 +12,13 @@
 		F9A60793283CEDC00082F212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A60792283CEDC00082F212 /* Assets.xcassets */; };
 		F9A60796283CEDC00082F212 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A60795283CEDC00082F212 /* Preview Assets.xcassets */; };
 		F9A607A0283CEDC10082F212 /* LocalGnomesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6079F283CEDC10082F212 /* LocalGnomesTests.swift */; };
-		F9A607AA283CEDC10082F212 /* LocalGnomesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607A9283CEDC10082F212 /* LocalGnomesUITests.swift */; };
-		F9A607AC283CEDC10082F212 /* LocalGnomesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607AB283CEDC10082F212 /* LocalGnomesUITestsLaunchTests.swift */; };
+		F9A607B9283CEDCD0082F212 /* Gnome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607B8283CEDCD0082F212 /* Gnome.swift */; };
+		F9A607BB283CEF2D0082F212 /* brastlewark.json in Resources */ = {isa = PBXBuildFile; fileRef = F9A607BA283CEF2D0082F212 /* brastlewark.json */; };
+		F9A607C0283CEFFC0082F212 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9A607BF283CEFFC0082F212 /* readme.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F9A6079C283CEDC10082F212 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F9A60783283CEDBD0082F212 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F9A6078A283CEDBD0082F212;
-			remoteInfo = LocalGnomes;
-		};
-		F9A607A6283CEDC10082F212 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9A60783283CEDBD0082F212 /* Project object */;
 			proxyType = 1;
@@ -41,9 +35,9 @@
 		F9A60795283CEDC00082F212 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F9A6079B283CEDC10082F212 /* LocalGnomesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalGnomesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A6079F283CEDC10082F212 /* LocalGnomesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGnomesTests.swift; sourceTree = "<group>"; };
-		F9A607A5283CEDC10082F212 /* LocalGnomesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalGnomesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9A607A9283CEDC10082F212 /* LocalGnomesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGnomesUITests.swift; sourceTree = "<group>"; };
-		F9A607AB283CEDC10082F212 /* LocalGnomesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGnomesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F9A607B8283CEDCD0082F212 /* Gnome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gnome.swift; sourceTree = "<group>"; };
+		F9A607BA283CEF2D0082F212 /* brastlewark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brastlewark.json; sourceTree = "<group>"; };
+		F9A607BF283CEFFC0082F212 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9A607A2283CEDC10082F212 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +63,6 @@
 			children = (
 				F9A6078D283CEDBD0082F212 /* LocalGnomes */,
 				F9A6079E283CEDC10082F212 /* LocalGnomesTests */,
-				F9A607A8283CEDC10082F212 /* LocalGnomesUITests */,
 				F9A6078C283CEDBD0082F212 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +72,6 @@
 			children = (
 				F9A6078B283CEDBD0082F212 /* LocalGnomes.app */,
 				F9A6079B283CEDC10082F212 /* LocalGnomesTests.xctest */,
-				F9A607A5283CEDC10082F212 /* LocalGnomesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,8 +79,11 @@
 		F9A6078D283CEDBD0082F212 /* LocalGnomes */ = {
 			isa = PBXGroup;
 			children = (
+				F9A607BE283CEF8A0082F212 /* Views */,
+				F9A607BD283CEF850082F212 /* Network */,
+				F9A607BC283CEF440082F212 /* Models */,
 				F9A6078E283CEDBD0082F212 /* LocalGnomesApp.swift */,
-				F9A60790283CEDBD0082F212 /* ContentView.swift */,
+				F9A607BF283CEFFC0082F212 /* readme.txt */,
 				F9A60792283CEDC00082F212 /* Assets.xcassets */,
 				F9A60794283CEDC00082F212 /* Preview Content */,
 			);
@@ -118,13 +106,28 @@
 			path = LocalGnomesTests;
 			sourceTree = "<group>";
 		};
-		F9A607A8283CEDC10082F212 /* LocalGnomesUITests */ = {
+		F9A607BC283CEF440082F212 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F9A607A9283CEDC10082F212 /* LocalGnomesUITests.swift */,
-				F9A607AB283CEDC10082F212 /* LocalGnomesUITestsLaunchTests.swift */,
+				F9A607BA283CEF2D0082F212 /* brastlewark.json */,
+				F9A607B8283CEDCD0082F212 /* Gnome.swift */,
 			);
-			path = LocalGnomesUITests;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F9A607BD283CEF850082F212 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F9A607BE283CEF8A0082F212 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F9A60790283CEDBD0082F212 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +168,6 @@
 			productReference = F9A6079B283CEDC10082F212 /* LocalGnomesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F9A607A4283CEDC10082F212 /* LocalGnomesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F9A607B5283CEDC10082F212 /* Build configuration list for PBXNativeTarget "LocalGnomesUITests" */;
-			buildPhases = (
-				F9A607A1283CEDC10082F212 /* Sources */,
-				F9A607A2283CEDC10082F212 /* Frameworks */,
-				F9A607A3283CEDC10082F212 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F9A607A7283CEDC10082F212 /* PBXTargetDependency */,
-			);
-			name = LocalGnomesUITests;
-			productName = LocalGnomesUITests;
-			productReference = F9A607A5283CEDC10082F212 /* LocalGnomesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +182,6 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					F9A6079A283CEDC10082F212 = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = F9A6078A283CEDBD0082F212;
-					};
-					F9A607A4283CEDC10082F212 = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = F9A6078A283CEDBD0082F212;
 					};
@@ -221,7 +202,6 @@
 			targets = (
 				F9A6078A283CEDBD0082F212 /* LocalGnomes */,
 				F9A6079A283CEDC10082F212 /* LocalGnomesTests */,
-				F9A607A4283CEDC10082F212 /* LocalGnomesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,18 +212,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9A60796283CEDC00082F212 /* Preview Assets.xcassets in Resources */,
+				F9A607BB283CEF2D0082F212 /* brastlewark.json in Resources */,
+				F9A607C0283CEFFC0082F212 /* readme.txt in Resources */,
 				F9A60793283CEDC00082F212 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F9A60799283CEDC10082F212 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9A607A3283CEDC10082F212 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A607B9283CEDCD0082F212 /* Gnome.swift in Sources */,
 				F9A60791283CEDBD0082F212 /* ContentView.swift in Sources */,
 				F9A6078F283CEDBD0082F212 /* LocalGnomesApp.swift in Sources */,
 			);
@@ -270,15 +246,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9A607A1283CEDC10082F212 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F9A607AA283CEDC10082F212 /* LocalGnomesUITests.swift in Sources */,
-				F9A607AC283CEDC10082F212 /* LocalGnomesUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +253,6 @@
 			isa = PBXTargetDependency;
 			target = F9A6078A283CEDBD0082F212 /* LocalGnomes */;
 			targetProxy = F9A6079C283CEDC10082F212 /* PBXContainerItemProxy */;
-		};
-		F9A607A7283CEDC10082F212 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F9A6078A283CEDBD0082F212 /* LocalGnomes */;
-			targetProxy = F9A607A6283CEDC10082F212 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -346,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -401,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -425,8 +387,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,8 +418,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,7 +444,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 887A8LDCYS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,7 +469,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 887A8LDCYS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,52 +482,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocalGnomes.app/LocalGnomes";
-			};
-			name = Release;
-		};
-		F9A607B6283CEDC10082F212 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 887A8LDCYS;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = demo.LocalGnomesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LocalGnomes;
-			};
-			name = Debug;
-		};
-		F9A607B7283CEDC10082F212 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 887A8LDCYS;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = demo.LocalGnomesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LocalGnomes;
 			};
 			name = Release;
 		};
@@ -591,15 +511,6 @@
 			buildConfigurations = (
 				F9A607B3283CEDC10082F212 /* Debug */,
 				F9A607B4283CEDC10082F212 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9A607B5283CEDC10082F212 /* Build configuration list for PBXNativeTarget "LocalGnomesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9A607B6283CEDC10082F212 /* Debug */,
-				F9A607B7283CEDC10082F212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
