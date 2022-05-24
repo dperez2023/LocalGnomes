@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		F9A6078F283CEDBD0082F212 /* LocalGnomesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6078E283CEDBD0082F212 /* LocalGnomesApp.swift */; };
-		F9A60791283CEDBD0082F212 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A60790283CEDBD0082F212 /* ContentView.swift */; };
+		F9A60791283CEDBD0082F212 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A60790283CEDBD0082F212 /* MainView.swift */; };
 		F9A60793283CEDC00082F212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A60792283CEDC00082F212 /* Assets.xcassets */; };
 		F9A60796283CEDC00082F212 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A60795283CEDC00082F212 /* Preview Assets.xcassets */; };
 		F9A607A0283CEDC10082F212 /* LocalGnomesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6079F283CEDC10082F212 /* LocalGnomesTests.swift */; };
 		F9A607B9283CEDCD0082F212 /* Gnome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607B8283CEDCD0082F212 /* Gnome.swift */; };
 		F9A607C0283CEFFC0082F212 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9A607BF283CEFFC0082F212 /* readme.txt */; };
 		F9A607C5283D11420082F212 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607C4283D11420082F212 /* DataManager.swift */; };
-		F9A607C7283D154E0082F212 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607C6283D154E0082F212 /* ShapeStyle+Colors.swift */; };
+		F9A607C7283D154E0082F212 /* ShapeStyle-Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607C6283D154E0082F212 /* ShapeStyle-Colors.swift */; };
+		F9A607C9283D1C930082F212 /* String-Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607C8283D1C930082F212 /* String-Localization.swift */; };
+		F9A607CB283D24010082F212 /* MainView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607CA283D24010082F212 /* MainView-ViewModel.swift */; };
+		F9A607CD283D24B50082F212 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607CC283D24B50082F212 /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +34,7 @@
 /* Begin PBXFileReference section */
 		F9A6078B283CEDBD0082F212 /* LocalGnomes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalGnomes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A6078E283CEDBD0082F212 /* LocalGnomesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGnomesApp.swift; sourceTree = "<group>"; };
-		F9A60790283CEDBD0082F212 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F9A60790283CEDBD0082F212 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F9A60792283CEDC00082F212 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9A60795283CEDC00082F212 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F9A6079B283CEDC10082F212 /* LocalGnomesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalGnomesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +42,10 @@
 		F9A607B8283CEDCD0082F212 /* Gnome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gnome.swift; sourceTree = "<group>"; };
 		F9A607BF283CEFFC0082F212 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		F9A607C4283D11420082F212 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		F9A607C6283D154E0082F212 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Colors.swift"; sourceTree = "<group>"; };
+		F9A607C6283D154E0082F212 /* ShapeStyle-Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle-Colors.swift"; sourceTree = "<group>"; };
+		F9A607C8283D1C930082F212 /* String-Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Localization.swift"; sourceTree = "<group>"; };
+		F9A607CA283D24010082F212 /* MainView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView-ViewModel.swift"; sourceTree = "<group>"; };
+		F9A607CC283D24B50082F212 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +134,9 @@
 		F9A607BE283CEF8A0082F212 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F9A60790283CEDBD0082F212 /* ContentView.swift */,
+				F9A60790283CEDBD0082F212 /* MainView.swift */,
+				F9A607CA283D24010082F212 /* MainView-ViewModel.swift */,
+				F9A607CC283D24B50082F212 /* DetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,7 +144,8 @@
 		F9A607C1283CF1650082F212 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F9A607C6283D154E0082F212 /* ShapeStyle+Colors.swift */,
+				F9A607C6283D154E0082F212 /* ShapeStyle-Colors.swift */,
+				F9A607C8283D1C930082F212 /* String-Localization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,9 +253,12 @@
 			files = (
 				F9A607B9283CEDCD0082F212 /* Gnome.swift in Sources */,
 				F9A607C5283D11420082F212 /* DataManager.swift in Sources */,
-				F9A60791283CEDBD0082F212 /* ContentView.swift in Sources */,
+				F9A60791283CEDBD0082F212 /* MainView.swift in Sources */,
+				F9A607C9283D1C930082F212 /* String-Localization.swift in Sources */,
+				F9A607CB283D24010082F212 /* MainView-ViewModel.swift in Sources */,
+				F9A607CD283D24B50082F212 /* DetailsView.swift in Sources */,
 				F9A6078F283CEDBD0082F212 /* LocalGnomesApp.swift in Sources */,
-				F9A607C7283D154E0082F212 /* ShapeStyle+Colors.swift in Sources */,
+				F9A607C7283D154E0082F212 /* ShapeStyle-Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +468,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 887A8LDCYS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,7 +493,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 887A8LDCYS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

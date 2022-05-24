@@ -5,9 +5,7 @@ Every time the heroes they play arrive at a town, they have the issue they don't
 
 •    Document all libraries used and explain the reason you’ve used that library.
 •    Test the app: add the most important test you think it is needed.
-
 •    UI must not blocked by network connections or long operations
 •    Images coming from network cached to improve performance
-•    Error handling
 •    Use third party libraries for extended functionality
 •    Snappiness & responsiveness over sluggishness & idleness

@@ -11,7 +11,7 @@ enum Town: String {
     case Brastlewark
 }
 
-enum ErrorType: Error {
+enum ErrorType: String {
     case invalidData
     case invalidURL
 }
