@@ -45,9 +45,12 @@ struct DetailsView: View {
             .clipped()
             .listRowBackground(Color(UIColor.systemGroupedBackground))
         }
+        .navigationTitle(viewModel.gnome.displayName)
         .foregroundColor(.white)
         .sheet(isPresented: $viewModel.presentFriend) {
-            DetailsView(viewModel: DetailsView.ViewModel(gnome: viewModel.presentedFriend!, gnomes: viewModel.gnomes))
+            NavigationView {
+                DetailsView(viewModel: DetailsView.ViewModel(gnome: viewModel.presentedFriend!, gnomes: viewModel.gnomes))
+            }
         }
     }
 }
