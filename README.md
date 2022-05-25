@@ -1,6 +1,6 @@
-# LocalGnomes
+# Local Gnomes
 
-Challenge:
+## Challenge:
 
 Every time the heroes they play arrive at a town, they have the issue they don't know the local population and what they can do to help them on their adventures. To facilitate trade with the local population they need an easy way to browse all the inhabitants details.
 
@@ -14,16 +14,16 @@ Show this data in the most user-friendly way you could think. Keep in mind our h
 - Snappiness & responsiveness over sluggishness & idleness
 - Document all libraries used and explain the reason you’ve used that library.
 
-Explanation:
+## Explanation:
 
-1. SwiftUI over UIKit
+- SwiftUI over UIKit
 
-2. No external libraries
+- No external libraries
 
-3. Profession over name
+- Profession over name
 
-4. Filter by name & profession
+- Filter by name & profession
 
-5. Access to friend's details
+- Access to friend's details
 
-6. Testing
+- Testing
