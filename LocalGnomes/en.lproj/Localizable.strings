@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  LocalGnomes
+
+  Created by dperezserrano on 25/5/22.
+  
+*/
+
+"search.bar.placeholder" = "Search by name or profession";
+"main.header.title" = "Gnome's professions are the most relevant to help you on your adventure.";
+"main.header.subtitle" = "Use the search bar if you know their name or need to browse for an specific profession";

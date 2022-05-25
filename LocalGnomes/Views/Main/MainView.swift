@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//MARK: - Views
+
 struct MainView: View {
     @StateObject private var viewModel = ViewModel()
 
@@ -22,7 +24,7 @@ struct MainView: View {
                             MainGnomeView(gnome: gnome)
                         }
                     }
-                    .searchable(text: $viewModel.searchText, prompt: "Search by name or profession")
+                    .searchable(text: $viewModel.searchText, prompt: "search.bar.placeholder".localized)
                     .padding([.horizontal, .bottom])
                     .task {
                         await viewModel.loadGnomes()
@@ -39,12 +41,12 @@ struct MainView: View {
 
 struct MainViewHeader: View {
     var body: some View {
-        Text("Gnome's professions are the most relevant to help you on your adventure.")
+        Text("main.header.title".localized)
             .font(.headline)
             .multilineTextAlignment(.center)
             .padding(.horizontal)
         Spacer()
-        Text("Use the search bar if you know their name or need to browse for an specific profession")
+        Text("main.header.subtitle".localized)
             .font(.headline)
             .multilineTextAlignment(.center)
             .padding(.horizontal)
@@ -60,16 +62,18 @@ struct MainGnomeView: View {
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding([.horizontal])
+                .multilineTextAlignment(.leading)
             Text(gnome.longDisplayName)
                 .font(.subheadline)
                 .foregroundColor(.darkBackground)
+                .multilineTextAlignment(.leading)
         }
         .padding(.vertical)
         .frame(maxWidth: .infinity)
         .background(.lightBackground)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .clipShape(RoundedRectangle(cornerRadius: 15))
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 15)
                 .stroke(.lightBackground)
         )
     }

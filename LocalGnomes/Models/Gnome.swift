@@ -33,11 +33,15 @@ struct Gnome: Codable, Identifiable {
     }
 
     var longDisplayName: String {
-        "\(name)"//(\(gender.rawValue))"
+        "\(name), \(gender.rawValue). (\(noFriends))"
+    }
+
+    var noFriends: String {
+        friends.count > 0 ? ("\(friends.count) friend\(friends.count > 1 ? "s" : "")") : "No friends"
     }
     
     var professionsList: String {
-        !professions.isEmpty ? "\(professions.joined(separator:", "))" : "No professions"
+        !professions.isEmpty ? "\(professions.joined(separator:", "))" : "Doesn't work"
     }
 
     private var gender: Gender {

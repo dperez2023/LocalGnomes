@@ -20,6 +20,7 @@
 		F9A607C9283D1C930082F212 /* String-Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607C8283D1C930082F212 /* String-Localization.swift */; };
 		F9A607CB283D24010082F212 /* MainView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607CA283D24010082F212 /* MainView-ViewModel.swift */; };
 		F9A607CD283D24B50082F212 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607CC283D24B50082F212 /* DetailsView.swift */; };
+		F9D96B53283E5FB8006890B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9D96B55283E5FB8006890B9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F9A607CA283D24010082F212 /* MainView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView-ViewModel.swift"; sourceTree = "<group>"; };
 		F9A607CC283D24B50082F212 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		F9D96B50283E3FC2006890B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F9D96B54283E5FB8006890B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				F9A607BF283CEFFC0082F212 /* readme.txt */,
 				F9A60792283CEDC00082F212 /* Assets.xcassets */,
 				F9A60794283CEDC00082F212 /* Preview Content */,
+				F9D96B55283E5FB8006890B9 /* Localizable.strings */,
 			);
 			path = LocalGnomes;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9A60796283CEDC00082F212 /* Preview Assets.xcassets in Resources */,
+				F9D96B53283E5FB8006890B9 /* Localizable.strings in Resources */,
 				F9A607C0283CEFFC0082F212 /* readme.txt in Resources */,
 				F9A60793283CEDC00082F212 /* Assets.xcassets in Resources */,
 			);
@@ -301,6 +305,17 @@
 			targetProxy = F9A6079C283CEDC10082F212 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9D96B55283E5FB8006890B9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9D96B54283E5FB8006890B9 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F9A607AD283CEDC10082F212 /* Debug */ = {

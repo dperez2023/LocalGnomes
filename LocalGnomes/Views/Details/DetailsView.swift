@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//MARK: - Views
+
 struct DetailsView: View {
     @StateObject var viewModel: ViewModel
 
