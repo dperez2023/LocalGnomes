@@ -24,7 +24,9 @@ struct MainView: View {
                 LazyVStack {
                     ForEach(searchResults) { gnome in
                         NavigationLink {
-                            DetailsView(gnome: gnome, gnomes: viewModel.gnomes)
+                            DetailsView(viewModel:
+                                            DetailsView.ViewModel(gnome: gnome,
+                                                                  gnomes: viewModel.gnomes))
                         } label: {
                             VStack {
                                 Text(gnome.longDisplayName)

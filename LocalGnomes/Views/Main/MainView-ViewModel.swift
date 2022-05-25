@@ -24,7 +24,7 @@ extension MainView {
                         self.loadDataErrorMessage = "Failed to load: \(error.rawValue)"
                         self.showLoadDataError = true
                     } else {
-                        fatalError("")
+                        fatalError("Load data with no response and no error")
                     }
                 }
             })

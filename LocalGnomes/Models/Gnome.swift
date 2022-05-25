@@ -15,11 +15,12 @@ enum Gender: String {
 
 struct Gnome: Codable, Identifiable {
     enum CodingKeys: CodingKey {
-        case id, name, age, weight, height, hair_color, professions, friends
+        case id, name, thumbnail, age, weight, height, hair_color, professions, friends
     }
 
     let id: Int
     let name: String
+    let thumbnail: String
     let age: Int
     let weight: Float
     let height: Float
@@ -28,7 +29,7 @@ struct Gnome: Codable, Identifiable {
     let friends: [String]
 
     var displayName: String {
-        "\(name))"
+        name
     }
 
     var longDisplayName: String {
@@ -43,6 +44,7 @@ struct Gnome: Codable, Identifiable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(id, forKey: .id)
         try container.encode(name, forKey: .name)
+        try container.encode(thumbnail, forKey: .thumbnail)
         try container.encode(age, forKey: .age)
         try container.encode(weight, forKey: .weight)
         try container.encode(height, forKey: .height)
@@ -55,6 +57,7 @@ struct Gnome: Codable, Identifiable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(Int.self, forKey: .id)
         name = try container.decode(String.self, forKey: .name)
+        thumbnail = try container.decode(String.self, forKey: .thumbnail)
         age = try container.decode(Int.self, forKey: .age)
         weight = try container.decode(Float.self, forKey: .weight)
         height = try container.decode(Float.self, forKey: .height)
@@ -66,6 +69,7 @@ struct Gnome: Codable, Identifiable {
     init() {
         id = 0
         name = ""
+        thumbnail = ""
         age = 0
         weight = 0
         height = 0

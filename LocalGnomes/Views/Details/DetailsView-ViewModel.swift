@@ -9,7 +9,7 @@ import Foundation
 
 extension DetailsView {
     @MainActor class ViewModel: ObservableObject {
-        @Published var gnome: Gnome?
+        @Published var gnome: Gnome
         @Published var friends: [Gnome]?
 
         var presentableFriends: [Gnome] {
@@ -20,17 +20,13 @@ extension DetailsView {
             }
         }
 
-        var gnomeName: String {
-            gnome?.displayName ?? ""
-        }
-
-        func initialize(gnome: Gnome, gnomes: [Gnome]) {
+        init(gnome: Gnome, gnomes: [Gnome]) {
             self.gnome = gnome
             self.friends = gnome.friends.map { gnomeFriend in
                 if let friend = gnomes.first(where: { $0.name == gnomeFriend }) {
                     return friend
                 } else {
-                    fatalError("Shouldn't happen")
+                    fatalError("DetailsView-ViewModel: Gnome's name doesn't match gnome list")
                 }
             }
         }

@@ -8,27 +8,31 @@
 import SwiftUI
 
 struct DetailsView: View {
-    @StateObject private var viewModel = ViewModel()
-    @State var gnome: Gnome
-    @State var gnomes: [Gnome]
+    @StateObject var viewModel: ViewModel
 
     var body: some View {
         VStack {
+            AsyncImage(url: URL(string: viewModel.gnome.thumbnail), scale: 3) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(height: 200)
             Text("Friends with:")
+                .padding(.vertical)
             List {
                 ForEach(viewModel.presentableFriends) { friend in
                     Text(friend.displayName)
                 }
-            }.navigationTitle(viewModel.gnomeName)
-        }
-        .onAppear {
-            viewModel.initialize(gnome: gnome, gnomes: gnomes) //WIP
+            }.navigationTitle(viewModel.gnome.displayName)
         }
     }
 }
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(gnome: Gnome(), gnomes: [])
+        DetailsView(viewModel: DetailsView.ViewModel(gnome: Gnome(), gnomes: []))
     }
 }
