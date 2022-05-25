@@ -9,6 +9,13 @@ import Foundation
 
 enum Town: String {
     case Brastlewark
+
+    var url: String {
+        switch self {
+        case .Brastlewark:
+            return "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
+        }
+    }
 }
 
 enum ErrorType: String {
@@ -18,7 +25,7 @@ enum ErrorType: String {
 
 class DataManager {
     static func loadData(_ town: Town, completion: @escaping ([Gnome]?, ErrorType?) -> Void) async {
-        guard let url = URL(string: "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json") else {
+        guard let url = URL(string: town.url) else {
             completion(nil, .invalidURL)
             return
         }

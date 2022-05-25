@@ -11,9 +11,18 @@ extension MainView {
     @MainActor class ViewModel: ObservableObject {
         @Published var gnomes = [Gnome]()
         @Published var showLoadDataError = false
-        @Published var loadDataErrorMessage = ""
-        @Published var selectedTown: Town = .Brastlewark
         @Published var searchText = ""
+
+        var loadDataErrorMessage = ""
+        var selectedTown: Town = .Brastlewark
+        var searchResults: [Gnome] {
+            if searchText.isEmpty {
+                return gnomes
+            } else {
+                return gnomes.filter {
+                    $0.displayName.contains(searchText) || $0.professions.contains(where: {$0 == searchText})}
+            }
+        }
 
         func loadGnomes() async {
             await DataManager.loadData(selectedTown, completion: { response, error in
