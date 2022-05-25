@@ -33,7 +33,11 @@ struct Gnome: Codable, Identifiable {
     }
 
     var longDisplayName: String {
-        "\(name) (\(gender.rawValue))"
+        "\(name)"//(\(gender.rawValue))"
+    }
+    
+    var professionsList: String {
+        !professions.isEmpty ? "\(professions.joined(separator:", "))" : "No professions"
     }
 
     private var gender: Gender {

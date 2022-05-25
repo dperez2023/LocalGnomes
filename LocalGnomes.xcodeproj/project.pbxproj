@@ -48,6 +48,7 @@
 		F9A607C8283D1C930082F212 /* String-Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Localization.swift"; sourceTree = "<group>"; };
 		F9A607CA283D24010082F212 /* MainView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView-ViewModel.swift"; sourceTree = "<group>"; };
 		F9A607CC283D24B50082F212 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		F9D96B50283E3FC2006890B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 		F9A6078D283CEDBD0082F212 /* LocalGnomes */ = {
 			isa = PBXGroup;
 			children = (
+				F9D96B50283E3FC2006890B9 /* Info.plist */,
 				F9A607C1283CF1650082F212 /* Extensions */,
 				F9A607BE283CEF8A0082F212 /* Views */,
 				F9A607BD283CEF850082F212 /* Network */,
@@ -428,6 +430,7 @@
 				DEVELOPMENT_TEAM = 887A8LDCYS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LocalGnomes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,6 +462,7 @@
 				DEVELOPMENT_TEAM = 887A8LDCYS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LocalGnomes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

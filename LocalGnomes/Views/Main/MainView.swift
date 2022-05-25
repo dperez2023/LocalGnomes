@@ -14,7 +14,8 @@ struct MainView: View {
         if viewModel.searchText.isEmpty {
             return viewModel.gnomes
         } else {
-            return viewModel.gnomes.filter { $0.displayName.contains(viewModel.searchText) }
+            return viewModel.gnomes.filter {
+                $0.displayName.contains(viewModel.searchText) || $0.professions.contains(where: {$0 == viewModel.searchText})}
         }
     }
 
@@ -24,14 +25,16 @@ struct MainView: View {
                 LazyVStack {
                     ForEach(searchResults) { gnome in
                         NavigationLink {
-                            DetailsView(viewModel:
-                                            DetailsView.ViewModel(gnome: gnome,
-                                                                  gnomes: viewModel.gnomes))
+                            DetailsView(viewModel: DetailsView.ViewModel(gnome: gnome, gnomes: viewModel.gnomes))
                         } label: {
                             VStack {
-                                Text(gnome.longDisplayName)
-                                    .font(.headline)
+                                Text(gnome.professionsList)
+                                    .font(.title)
                                     .foregroundColor(.white)
+                                    .padding([.horizontal])
+                                Text(gnome.longDisplayName)
+                                    .font(.subheadline)
+                                    .foregroundColor(.darkBackground)
                             }
                             .padding(.vertical)
                             .frame(maxWidth: .infinity)
@@ -43,7 +46,7 @@ struct MainView: View {
                             )
                         }
                     }
-                    .searchable(text: $viewModel.searchText)
+                    .searchable(text: $viewModel.searchText, prompt: "Search by name or profession")
                     .padding([.horizontal, .bottom])
                     .task {
                         await viewModel.loadGnomes()
