@@ -18,32 +18,30 @@ enum Town: String {
     }
 }
 
-enum ErrorType: String {
+enum ErrorType: Error {
     case invalidData
     case invalidURL
 }
 
 class DataManager {
-    static func loadData(_ town: Town, completion: @escaping ([Gnome]?, ErrorType?) -> Void) async {
+    static func loadData(_ town: Town) async throws -> Result<[Gnome], ErrorType> {
         guard let url = URL(string: town.url) else {
-            completion(nil, .invalidURL)
-            return
+            return .failure(.invalidURL)
         }
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-
             if let decodedResponse = try? JSONDecoder().decode([String: [Gnome]].self, from: data) {
                 if let gnomes = decodedResponse[town.rawValue], !gnomes.isEmpty {
-                    completion(gnomes, nil)
+                    return .success(gnomes)
                 } else {
-                    completion(nil, .invalidData)
+                    return .failure(.invalidData)
                 }
             } else {
-                completion(nil, .invalidData)
+                return .failure(.invalidData)
             }
         } catch {
-            completion(nil, .invalidURL)
+            return .failure(.invalidURL)
         }
     }
 }

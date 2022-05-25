@@ -25,18 +25,18 @@ extension MainView {
         }
 
         func loadGnomes() async {
-            await DataManager.loadData(selectedTown, completion: { response, error in
-                DispatchQueue.main.async {
-                    if let response = response {
-                        self.gnomes = response
-                    } else if let error = error {
-                        self.loadDataErrorMessage = "Failed to load: \(error.rawValue)"
-                        self.showLoadDataError = true
-                    } else {
-                        fatalError("Load data with no response and no error")
-                    }
+            do {
+                let result = try await DataManager.loadData(selectedTown)
+                switch result {
+                case .success(let gnomes):
+                    self.gnomes = gnomes
+                case .failure(let error):
+                    self.loadDataErrorMessage = "Failed to load: \(error.localizedDescription)"
+                    self.showLoadDataError = true
                 }
-            })
+            } catch {
+                fatalError("Load data with no response and no error")
+            }
         }
     }
 }
