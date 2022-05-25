@@ -26,4 +26,6 @@ Show this data in the most user-friendly way you could think. Keep in mind our h
 
 - Access to friend's details
 
+- Color scheme
+
 - Testing
