@@ -28,6 +28,10 @@ struct Gnome: Codable, Identifiable {
     let friends: [String]
 
     var displayName: String {
+        "\(name))"
+    }
+
+    var longDisplayName: String {
         "\(name) (\(gender.rawValue))"
     }
 
@@ -57,5 +61,16 @@ struct Gnome: Codable, Identifiable {
         hairColor = try container.decode(String.self, forKey: .hair_color)
         professions = try container.decode([String].self, forKey: .professions)
         friends = try container.decode([String].self, forKey: .friends)
+    }
+
+    init() {
+        id = 0
+        name = ""
+        age = 0
+        weight = 0
+        height = 0
+        hairColor = ""
+        professions = []
+        friends = []
     }
 }

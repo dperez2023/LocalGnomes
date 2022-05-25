@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9008CC4283D56630054E573 /* DetailsView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9008CC3283D56630054E573 /* DetailsView-ViewModel.swift */; };
 		F9A6078F283CEDBD0082F212 /* LocalGnomesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6078E283CEDBD0082F212 /* LocalGnomesApp.swift */; };
 		F9A60791283CEDBD0082F212 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A60790283CEDBD0082F212 /* MainView.swift */; };
 		F9A60793283CEDC00082F212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A60792283CEDC00082F212 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9008CC3283D56630054E573 /* DetailsView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsView-ViewModel.swift"; sourceTree = "<group>"; };
 		F9A6078B283CEDBD0082F212 /* LocalGnomes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalGnomes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A6078E283CEDBD0082F212 /* LocalGnomesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGnomesApp.swift; sourceTree = "<group>"; };
 		F9A60790283CEDBD0082F212 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F9008CC5283D56670054E573 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F9A60790283CEDBD0082F212 /* MainView.swift */,
+				F9A607CA283D24010082F212 /* MainView-ViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F9008CC6283D566F0054E573 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				F9A607CC283D24B50082F212 /* DetailsView.swift */,
+				F9008CC3283D56630054E573 /* DetailsView-ViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		F9A60782283CEDBD0082F212 = {
 			isa = PBXGroup;
 			children = (
@@ -134,9 +154,8 @@
 		F9A607BE283CEF8A0082F212 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F9A60790283CEDBD0082F212 /* MainView.swift */,
-				F9A607CA283D24010082F212 /* MainView-ViewModel.swift */,
-				F9A607CC283D24B50082F212 /* DetailsView.swift */,
+				F9008CC6283D566F0054E573 /* Details */,
+				F9008CC5283D56670054E573 /* Main */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +272,7 @@
 			files = (
 				F9A607B9283CEDCD0082F212 /* Gnome.swift in Sources */,
 				F9A607C5283D11420082F212 /* DataManager.swift in Sources */,
+				F9008CC4283D56630054E573 /* DetailsView-ViewModel.swift in Sources */,
 				F9A60791283CEDBD0082F212 /* MainView.swift in Sources */,
 				F9A607C9283D1C930082F212 /* String-Localization.swift in Sources */,
 				F9A607CB283D24010082F212 /* MainView-ViewModel.swift in Sources */,

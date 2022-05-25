@@ -12,9 +12,11 @@ extension MainView {
         @Published var gnomes = [Gnome]()
         @Published var showLoadDataError = false
         @Published var loadDataErrorMessage = ""
+        @Published var selectedTown: Town = .Brastlewark
+        @Published var searchText = ""
 
-        func loadData() async {
-            await DataManager.loadData(.Brastlewark, completion: { response, error in
+        func loadGnomes() async {
+            await DataManager.loadData(selectedTown, completion: { response, error in
                 DispatchQueue.main.async {
                     if let response = response {
                         self.gnomes = response
