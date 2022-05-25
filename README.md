@@ -17,10 +17,10 @@ Show this data in the most user-friendly way you could think. Keep in mind our h
 ## Explanation:
 
 ### SwiftUI over UIKit:
-In order to reduce the overall amount of code with improved perfomance SwiftUI with a combination of async/await were used in this project
+In order to reduce the overall amount of code and improve perfomance, SwiftUI with a combination of async/await were used in this project
 
 ### No third libraries:
-Because AsyncImage is best in SwiftUI for images cache and load and also Lists with LazyVStack allowed to present big amount of items without much hassle there wasn't a reason to use a third-party library.
+Because AsyncImage is best in SwiftUI for images cache/load and also Lists with LazyVStack (for big amount of items without much hassle) there wasn't a reason to use a third-party library for this project.
 
 ### Profession over name:
 Gnomes names as well as their random profile pictures are irrelevant for our heroes since they don't know who they are. However, professions are. Thats why the main view present a list of professions with the name of the gnome below it.
