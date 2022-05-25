@@ -16,7 +16,7 @@ struct DetailsView: View {
         List {
             GnomeInformationView(gnome: viewModel.gnome)
             if !viewModel.presentableFriends.isEmpty {
-                Section("Friends") {
+                Section("details.friends.title".localized) {
                     ForEach(viewModel.presentableFriends) { friend in
                         Button(friend.displayName) {
                             viewModel.presentFriend = true
@@ -30,7 +30,7 @@ struct DetailsView: View {
                 .listRowBackground(Color(UIColor.systemGroupedBackground))
             }
 
-            Section("Profile picture") {
+            Section("details.picture.title".localized) {
                 AsyncImage(url: URL(string: viewModel.gnome.thumbnail), scale: 3) { image in
                         image
                             .resizable()
@@ -49,7 +49,6 @@ struct DetailsView: View {
         .sheet(isPresented: $viewModel.presentFriend) {
             DetailsView(viewModel: DetailsView.ViewModel(gnome: viewModel.presentedFriend!, gnomes: viewModel.gnomes))
         }
-        .background(.darkBackground)
     }
 }
 
@@ -63,7 +62,7 @@ struct GnomeInformationView: View {
     var gnome: Gnome
 
     var body: some View {
-        Section("Personal Information") {
+        Section("details.personal.title".localized) {
             Text(String(format: "details.age.title".localized, gnome.age))
                 .detailsTitleStyle()
             Text(String(format: "details.weight.title".localized, gnome.weight))

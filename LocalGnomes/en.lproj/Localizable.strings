@@ -14,3 +14,7 @@
 "details.height.title" = "Height: %.1f";
 "details.hairColor.title" = "Hair color: %@";
 "details.professions.title" = "Profession: %@";
+"details.personal.title" = "Personal Information";
+"details.picture.title" = "Profile Picture";
+"details.friends.title" = "Friends";
+

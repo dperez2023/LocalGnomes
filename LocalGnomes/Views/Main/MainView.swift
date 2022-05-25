@@ -32,7 +32,7 @@ struct MainView: View {
                 }
             }
             .navigationTitle("\(viewModel.selectedTown.rawValue) Gnomes")
-            .background(.darkBackground)
+            .background(.black)
             .preferredColorScheme(.dark)
             .alert(viewModel.loadDataErrorMessage, isPresented: $viewModel.showLoadDataError) { }
         }.accentColor(.white)
@@ -41,13 +41,16 @@ struct MainView: View {
 
 struct MainViewHeader: View {
     var body: some View {
+        Spacer()
+        Spacer()
         Text("main.header.title".localized)
             .font(.headline)
             .multilineTextAlignment(.center)
             .padding(.horizontal)
         Spacer()
+        Spacer()
         Text("main.header.subtitle".localized)
-            .font(.headline)
+            .font(.subheadline)
             .multilineTextAlignment(.center)
             .padding(.horizontal)
     }
@@ -60,21 +63,21 @@ struct MainGnomeView: View {
         VStack {
             Text(gnome.professionsList)
                 .font(.headline)
-                .foregroundColor(.white)
+                .foregroundColor(.lightBackground)
                 .padding([.horizontal])
                 .multilineTextAlignment(.leading)
             Text(gnome.longDisplayName)
                 .font(.subheadline)
-                .foregroundColor(.darkBackground)
+                .foregroundColor(.white)
                 .multilineTextAlignment(.leading)
         }
         .padding(.vertical)
         .frame(maxWidth: .infinity)
-        .background(.lightBackground)
+        .background(.darkBackground)
         .clipShape(RoundedRectangle(cornerRadius: 15))
         .overlay(
             RoundedRectangle(cornerRadius: 15)
-                .stroke(.lightBackground)
+                .stroke(.darkBackground)
         )
     }
 }
