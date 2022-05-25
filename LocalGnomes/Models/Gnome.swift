@@ -41,7 +41,7 @@ struct Gnome: Codable, Identifiable {
     }
     
     var professionsList: String {
-        !professions.isEmpty ? "\(professions.joined(separator:", "))" : "Doesn't work"
+        !professions.isEmpty ? "\(professions.joined(separator:", "))" : "No profession"
     }
 
     private var gender: Gender {

@@ -9,3 +9,8 @@
 "search.bar.placeholder" = "Search by name or profession";
 "main.header.title" = "Gnome's professions are the most relevant to help you on your adventure.";
 "main.header.subtitle" = "Use the search bar if you know their name or need to browse for an specific profession";
+"details.age.title" = "Age: %d";
+"details.weight.title" = "Weight: %.1f";
+"details.height.title" = "Height: %.1f";
+"details.hairColor.title" = "Hair color: %@";
+"details.professions.title" = "Professions: %@";

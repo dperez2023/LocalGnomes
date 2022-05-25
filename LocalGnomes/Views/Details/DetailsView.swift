@@ -23,6 +23,19 @@ struct DetailsView: View {
                     ProgressView()
                 }
                 .frame(height: 200)
+                VStack {
+                    Text(String(format: "details.age.title".localized, viewModel.gnome.age))
+                        .detailsTitleStyle()
+                    Text(String(format: "details.weight.title".localized, viewModel.gnome.weight))
+                        .detailsTitleStyle()
+                    Text(String(format: "details.height.title".localized, viewModel.gnome.height))
+                        .detailsTitleStyle()
+                    Text(String(format: "details.hairColor.title".localized, viewModel.gnome.hairColor))
+                        .detailsTitleStyle()
+                    Text(String(format: "details.professions.title".localized, viewModel.gnome.professionsList))
+                        .detailsTitleStyle()
+                }
+                .multilineTextAlignment(.leading)
                 if !viewModel.presentableFriends.isEmpty {
                     List {
                         ForEach(viewModel.presentableFriends) { friend in
@@ -50,5 +63,17 @@ struct DetailsView: View {
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
         DetailsView(viewModel: DetailsView.ViewModel(gnome: Gnome(), gnomes: []))
+    }
+}
+
+//MARK: - Modifiers
+
+struct DetailsLabel: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.headline)
+            .foregroundColor(.white)
+            .padding([.horizontal])
+            .multilineTextAlignment(.leading)
     }
 }

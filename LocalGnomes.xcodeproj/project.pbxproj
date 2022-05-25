@@ -20,6 +20,7 @@
 		F9A607CB283D24010082F212 /* MainView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607CA283D24010082F212 /* MainView-ViewModel.swift */; };
 		F9A607CD283D24B50082F212 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A607CC283D24B50082F212 /* DetailsView.swift */; };
 		F9D96B53283E5FB8006890B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9D96B55283E5FB8006890B9 /* Localizable.strings */; };
+		F9D96B57283E7FEC006890B9 /* View-Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D96B56283E7FEC006890B9 /* View-Modifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F9A607CC283D24B50082F212 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		F9D96B50283E3FC2006890B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F9D96B54283E5FB8006890B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F9D96B56283E7FEC006890B9 /* View-Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-Modifiers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				F9A607C6283D154E0082F212 /* ShapeStyle-Colors.swift */,
 				F9A607C8283D1C930082F212 /* String-Localization.swift */,
+				F9D96B56283E7FEC006890B9 /* View-Modifiers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				F9A607C9283D1C930082F212 /* String-Localization.swift in Sources */,
 				F9A607CB283D24010082F212 /* MainView-ViewModel.swift in Sources */,
 				F9A607CD283D24B50082F212 /* DetailsView.swift in Sources */,
+				F9D96B57283E7FEC006890B9 /* View-Modifiers.swift in Sources */,
 				F9A6078F283CEDBD0082F212 /* LocalGnomesApp.swift in Sources */,
 				F9A607C7283D154E0082F212 /* ShapeStyle-Colors.swift in Sources */,
 			);
