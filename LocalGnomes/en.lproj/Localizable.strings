@@ -13,4 +13,4 @@
 "details.weight.title" = "Weight: %.1f";
 "details.height.title" = "Height: %.1f";
 "details.hairColor.title" = "Hair color: %@";
-"details.professions.title" = "Professions: %@";
+"details.professions.title" = "Profession: %@";

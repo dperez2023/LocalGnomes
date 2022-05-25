@@ -35,7 +35,7 @@ struct MainView: View {
             .background(.darkBackground)
             .preferredColorScheme(.dark)
             .alert(viewModel.loadDataErrorMessage, isPresented: $viewModel.showLoadDataError) { }
-        }
+        }.accentColor(.white)
     }
 }
 
